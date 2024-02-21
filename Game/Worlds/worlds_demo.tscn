@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://c1fbqyuqkykrd"]
+
+[ext_resource type="Texture2D" uid="uid://dd8sq63crblxu" path="res://Game/Worlds/Land0/sweetBattle_land0_background.png" id="1_tjhjk"]
+[ext_resource type="Texture2D" uid="uid://bpbq4t6xtffru" path="res://Game/Worlds/Land1/sweetBattle_land1_background.png" id="2_ihf0c"]
+[ext_resource type="Texture2D" uid="uid://c0dyhts4w7esi" path="res://Game/Worlds/Land2/sweetBattle_land2_background.png" id="3_jef8d"]
+[ext_resource type="Texture2D" uid="uid://bpg6luo8hjycr" path="res://Game/Worlds/Land3/sweetBattle_land3_background.png" id="4_07mvt"]
+[ext_resource type="Texture2D" uid="uid://coi0d45cxcx1j" path="res://Game/Worlds/Land4/sweetBattle_land4_background.png" id="5_lrqgw"]
+
+[node name="WorldsDemo" type="Node2D"]
+
+[node name="SweetBattleLand0Background" type="Sprite2D" parent="."]
+position = Vector2(2505, 887)
+texture = ExtResource("1_tjhjk")
+
+[node name="SweetBattleLand1Background" type="Sprite2D" parent="."]
+position = Vector2(2427, 2463)
+texture = ExtResource("2_ihf0c")
+
+[node name="SweetBattleLand2Background" type="Sprite2D" parent="."]
+position = Vector2(2439, 3835)
+texture = ExtResource("3_jef8d")
+
+[node name="SweetBattleLand3Background" type="Sprite2D" parent="."]
+position = Vector2(2273, 5263)
+texture = ExtResource("4_07mvt")
+
+[node name="SweetBattleLand4Background" type="Sprite2D" parent="."]
+position = Vector2(2321, 6674)
+texture = ExtResource("5_lrqgw")

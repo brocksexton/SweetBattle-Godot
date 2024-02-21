@@ -1,0 +1,13 @@
+res://Background/Background.tscn::eb097ea79db493cda1fa0a30f8678963::1708488741::res://.godot/exported/133200997/export-31aef03e6046fee4652fdbd5f7a65bed-Background.scn
+res://Game/Bullet/Bullet.tscn::e2a1df357dd37c65296ad22892be3b99::1708488741::res://.godot/exported/133200997/export-29ed15a7f0a227a0eb7a1fe3a6e414ca-Bullet.scn
+res://Game/GameInterface/GameInterface.tscn::0acb0da76ad9119a99fc8f2abce02e3c::1708488741::res://.godot/exported/133200997/export-9ac815a7ed2c20c99203c90aa1ae1e2b-GameInterface.scn
+res://Game/ProgressBarStyle/BackgroundStyle.tres::5440a49036b9c02d2132c6b5891bee9c::1708488741::res://.godot/exported/133200997/export-9757d49cdd9c990a7f7dd182e45e6a59-BackgroundStyle.res
+res://Game/ProgressBarStyle/FillStyle.tres::a377dda7cf8c7211e0cffe3d47026e6b::1708488741::res://.godot/exported/133200997/export-6d86c721cfd359fbf2b37625e2278c59-FillStyle.res
+res://Game/Shooter/ShooterBody/ShooterBody.tscn::256c49ba8feb6073833a9286f7c244b9::1708488741::res://.godot/exported/133200997/export-e846541298cfc839a832e0dd48abdc1a-ShooterBody.scn
+res://Game/Shooter/Shooter.tscn::71544467e44f045376f704f6acccbc74::1708488741::res://.godot/exported/133200997/export-73d0639fff20d2abfdfe2e0ce310daaf-Shooter.scn
+res://Game/Worlds/worlds_demo.tscn::ce65c48a7b15d6295e2b34e3e171f054::1708491879::res://.godot/exported/133200997/export-ee7dac7109e91bc0f0902ebad9d1a0e6-worlds_demo.scn
+res://Game/Game.tscn::01d0cb4da7b02fcf17e117ea25a632c0::1708490011::res://.godot/exported/133200997/export-015fcee914f59389e560071981165e64-Game.scn
+res://Interface/PlayerLabel/PlayerLabel.tres::4ee97cc049d6e1574b813fe00152df7c::1708488741::res://.godot/exported/133200997/export-86a2170b608e596f0f1619f5bc89bdf6-PlayerLabel.res
+res://Interface/PlayerLabel/PlayerLabel.tscn::7e41c35ef6738d7fb1e09d01f6735037::1708488741::res://.godot/exported/133200997/export-44b883b90698bbc9bdb4b0ebdc785ac9-PlayerLabel.scn
+res://Interface/Interface.tscn::9f0ac8c1fd0ac049edbe1b17ca84c7eb::1708490348::res://.godot/exported/133200997/export-2ad6c2001d976b4ac5534098798196e8-Interface.scn
+res://Main.tscn::69d3b670bc9df4f7d72e80961c4d1e6b::1708491879::res://.godot/exported/133200997/export-bcb0d2eb5949c52b6a65bfe9de3e985b-Main.scn
