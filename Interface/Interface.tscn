@@ -1,0 +1,136 @@
+[gd_scene load_steps=4 format=3 uid="uid://cuf2jgmqhrjat"]
+
+[ext_resource type="Script" path="res://Interface/Interface.gd" id="1_8dd7u"]
+[ext_resource type="FontFile" uid="uid://cwh8mrj7syb3g" path="res://Externals/Fonts/Comfortaa-VariableFont_wght.ttf" id="3_5odo4"]
+[ext_resource type="FontFile" uid="uid://b3qg2gerraxc5" path="res://Game/CHUBBY.TTF" id="3_dujis"]
+
+[node name="Interface" type="CanvasLayer"]
+script = ExtResource("1_8dd7u")
+
+[node name="LoginScreen" type="VBoxContainer" parent="."]
+anchors_preset = -1
+anchor_left = 0.501
+anchor_top = 0.528
+anchor_right = 0.501
+anchor_bottom = 0.714
+offset_left = -854.92
+offset_top = -493.24
+offset_right = 281.08
+offset_bottom = 59.88
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 0.0663225
+scale = Vector2(0.54, 0.54)
+pivot_offset = Vector2(0.03, 2.08165e-12)
+theme_override_constants/separation = 32
+alignment = 1
+
+[node name="Username" type="LineEdit" parent="LoginScreen"]
+custom_minimum_size = Vector2(1000, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_dujis")
+theme_override_font_sizes/font_size = 100
+placeholder_text = "Username"
+caret_blink = true
+
+[node name="ServerCredentialsContainer" type="HBoxContainer" parent="LoginScreen"]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Server" type="LineEdit" parent="LoginScreen/ServerCredentialsContainer"]
+custom_minimum_size = Vector2(800, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_dujis")
+theme_override_font_sizes/font_size = 100
+text = "127.0.0.1"
+placeholder_text = "Server"
+
+[node name="Port" type="LineEdit" parent="LoginScreen/ServerCredentialsContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_dujis")
+theme_override_font_sizes/font_size = 100
+text = "25000"
+placeholder_text = "Server"
+
+[node name="HostButton" type="Button" parent="LoginScreen"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_dujis")
+theme_override_font_sizes/font_size = 150
+text = "Host Server"
+
+[node name="ConnectButton" type="Button" parent="LoginScreen"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_dujis")
+theme_override_font_sizes/font_size = 150
+text = "Connect Server"
+
+[node name="LobbyScreenControl" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LobbyScreenScroll" type="ScrollContainer" parent="LobbyScreenControl"]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 100.0
+offset_right = 826.0
+offset_bottom = 818.0
+horizontal_scroll_mode = 0
+
+[node name="LobbyScreen" type="VBoxContainer" parent="LobbyScreenControl/LobbyScreenScroll"]
+layout_mode = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="PlayerLabelTitle" type="Label" parent="LobbyScreenControl/LobbyScreenScroll/LobbyScreen"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_dujis")
+theme_override_font_sizes/font_size = 100
+text = "Players"
+horizontal_alignment = 1
+
+[node name="MessagesContainer" type="VBoxContainer" parent="LobbyScreenControl"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -1120.0
+offset_top = 66.0
+offset_right = -58.0
+offset_bottom = 1061.0
+grow_horizontal = 0
+theme_override_constants/separation = 30
+
+[node name="Messages" type="RichTextLabel" parent="LobbyScreenControl/MessagesContainer"]
+custom_minimum_size = Vector2(800, 800)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("3_dujis")
+theme_override_fonts/bold_font = ExtResource("3_dujis")
+theme_override_fonts/italics_font = ExtResource("3_dujis")
+theme_override_fonts/bold_italics_font = ExtResource("3_dujis")
+theme_override_font_sizes/normal_font_size = 40
+theme_override_font_sizes/bold_font_size = 90
+theme_override_font_sizes/italics_font_size = 40
+theme_override_font_sizes/bold_italics_font_size = 45
+theme_override_font_sizes/mono_font_size = 40
+bbcode_enabled = true
+text = "[center][b]Messages[/b][/center]
+"
+scroll_following = true
+
+[node name="SendMessage" type="LineEdit" parent="LobbyScreenControl/MessagesContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_5odo4")
+theme_override_font_sizes/font_size = 80
+placeholder_text = "Type message..."
+caret_blink = true
+
+[connection signal="pressed" from="LoginScreen/HostButton" to="." method="_on_host_button_pressed"]
+[connection signal="pressed" from="LoginScreen/ConnectButton" to="." method="_on_connect_button_pressed"]
+[connection signal="text_submitted" from="LobbyScreenControl/MessagesContainer/SendMessage" to="." method="_on_send_message"]
