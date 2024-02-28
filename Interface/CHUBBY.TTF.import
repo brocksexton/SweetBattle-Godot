@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://b3qg2gerraxc5"
-path="res://.godot/imported/CHUBBY.TTF-40c9f693137ef8983c9df71ff27029f5.fontdata"
+path="res://.godot/imported/CHUBBY.TTF-21d5f4ff6cb2a59a7e813aadeacb8c88.fontdata"
 
 [deps]
 
-source_file="res://Game/CHUBBY.TTF"
-dest_files=["res://.godot/imported/CHUBBY.TTF-40c9f693137ef8983c9df71ff27029f5.fontdata"]
+source_file="res://Interface/CHUBBY.TTF"
+dest_files=["res://.godot/imported/CHUBBY.TTF-21d5f4ff6cb2a59a7e813aadeacb8c88.fontdata"]
 
 [params]
 

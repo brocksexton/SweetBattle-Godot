@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://cuf2jgmqhrjat"]
+[gd_scene load_steps=7 format=3 uid="uid://cuf2jgmqhrjat"]
 
 [ext_resource type="Script" path="res://Interface/Interface.gd" id="1_8dd7u"]
 [ext_resource type="FontFile" uid="uid://cwh8mrj7syb3g" path="res://Externals/Fonts/Comfortaa-VariableFont_wght.ttf" id="3_5odo4"]
-[ext_resource type="FontFile" uid="uid://b3qg2gerraxc5" path="res://Game/CHUBBY.TTF" id="3_dujis"]
+[ext_resource type="Texture2D" uid="uid://bpg6luo8hjycr" path="res://Game/Worlds/Land3/sweetBattle_land3_background.png" id="3_8depi"]
+[ext_resource type="FontFile" uid="uid://b3qg2gerraxc5" path="res://Interface/CHUBBY.TTF" id="3_dujis"]
+[ext_resource type="Texture2D" uid="uid://tnmxe0jhvibd" path="res://Interface/Lobby_chat_window.png" id="4_fx7kn"]
+[ext_resource type="Texture2D" uid="uid://bw8erofy22qq7" path="res://Game/kavalokBackgrounds/locKongregateSweetBattle_lobby_bg_1.png" id="6_tjqis"]
 
 [node name="Interface" type="CanvasLayer"]
 script = ExtResource("1_8dd7u")
@@ -13,13 +16,12 @@ anchor_left = 0.501
 anchor_top = 0.528
 anchor_right = 0.501
 anchor_bottom = 0.714
-offset_left = -854.92
-offset_top = -493.24
-offset_right = 281.08
-offset_bottom = 59.88
+offset_left = -311.92
+offset_top = -220.24
+offset_right = 808.085
+offset_bottom = 332.879
 grow_horizontal = 2
 grow_vertical = 2
-rotation = 0.0663225
 scale = Vector2(0.54, 0.54)
 pivot_offset = Vector2(0.03, 2.08165e-12)
 theme_override_constants/separation = 32
@@ -66,6 +68,12 @@ theme_override_fonts/font = ExtResource("3_dujis")
 theme_override_font_sizes/font_size = 150
 text = "Connect Server"
 
+[node name="SweetBattleLand3Background" type="Sprite2D" parent="LoginScreen"]
+z_index = -3
+position = Vector2(1618.49, -135.185)
+scale = Vector2(2.172, 2.172)
+texture = ExtResource("3_8depi")
+
 [node name="LobbyScreenControl" type="Control" parent="."]
 visible = false
 layout_mode = 3
@@ -78,9 +86,9 @@ grow_vertical = 2
 [node name="LobbyScreenScroll" type="ScrollContainer" parent="LobbyScreenControl"]
 layout_mode = 0
 offset_left = 50.0
-offset_top = 100.0
-offset_right = 826.0
-offset_bottom = 818.0
+offset_top = 29.0
+offset_right = 818.0
+offset_bottom = 1054.0
 horizontal_scroll_mode = 0
 
 [node name="LobbyScreen" type="VBoxContainer" parent="LobbyScreenControl/LobbyScreenScroll"]
@@ -100,9 +108,9 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -1120.0
+offset_left = -1060.0
 offset_top = 66.0
-offset_right = -58.0
+offset_right = -21.0
 offset_bottom = 1061.0
 grow_horizontal = 0
 theme_override_constants/separation = 30
@@ -124,12 +132,24 @@ text = "[center][b]Messages[/b][/center]
 "
 scroll_following = true
 
+[node name="LobbyChatWindow" type="Sprite2D" parent="LobbyScreenControl/MessagesContainer/Messages"]
+z_index = -1
+position = Vector2(526.5, 398.5)
+scale = Vector2(0.321417, 0.345233)
+texture = ExtResource("4_fx7kn")
+
 [node name="SendMessage" type="LineEdit" parent="LobbyScreenControl/MessagesContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_5odo4")
 theme_override_font_sizes/font_size = 80
 placeholder_text = "Type message..."
 caret_blink = true
+
+[node name="LocKongregateSweetBattleLobbyBg1" type="Sprite2D" parent="LobbyScreenControl"]
+z_index = -2
+position = Vector2(1022, 715)
+scale = Vector2(0.43, 0.43)
+texture = ExtResource("6_tjqis")
 
 [connection signal="pressed" from="LoginScreen/HostButton" to="." method="_on_host_button_pressed"]
 [connection signal="pressed" from="LoginScreen/ConnectButton" to="." method="_on_connect_button_pressed"]

@@ -3,36 +3,161 @@
 [ext_resource type="Script" path="res://Game/Shooter/ShooterBody/ShooterBody.gd" id="1_arp0o"]
 [ext_resource type="StyleBox" uid="uid://b7yej2jfcd688" path="res://Game/ProgressBarStyle/BackgroundStyle.tres" id="2_swtwr"]
 [ext_resource type="StyleBox" uid="uid://jqlp6y7ktm1j" path="res://Game/ProgressBarStyle/FillStyle.tres" id="3_yjvxk"]
-[ext_resource type="Shader" path="res://Game/Shooter/ShooterBody/ShooterBody.gdshader" id="4_4wty4"]
-[ext_resource type="Texture2D" uid="uid://d0hjthpewlorv" path="res://Externals/Shooter.png" id="4_rf1hm"]
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_m7qyo"]
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_tkmh3"]
-seamless = true
-seamless_blend_skirt = 1.0
-noise = SubResource("FastNoiseLite_m7qyo")
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_yhu04"]
-resource_local_to_scene = true
-shader = ExtResource("4_4wty4")
-shader_parameter/color = Color(0, 0.670588, 0.662745, 1)
-shader_parameter/speed = 0.541
-shader_parameter/noise_texture = SubResource("NoiseTexture2D_tkmh3")
+[ext_resource type="Texture2D" uid="uid://bo77uw127caxo" path="res://Game/kavalokCharacter/movement/model_walk.png" id="4_kryap"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_u257t"]
-radius = 48.0
+radius = 31.0161
+
+[sub_resource type="Animation" id="Animation_hqu6o"]
+resource_name = "idle"
+
+[sub_resource type="Animation" id="Animation_1p43e"]
+resource_name = "walk"
+length = 0.75
+loop_mode = 2
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("4_kryap")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [12]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.07, 0.14, 0.21, 0.28, 0.35, 0.42, 0.49, 0.56, 0.63, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sprite2D:offset")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.28, 0.47, 0.62, 0.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, -16), Vector2(3.69, -16), Vector2(7, -16), Vector2(10, -16), Vector2(11, -16)]
+}
+
+[sub_resource type="Animation" id="Animation_4f1bt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("4_kryap")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [12]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sprite2D:offset")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -16)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qh3gl"]
+_data = {
+"RESET": SubResource("Animation_4f1bt"),
+"idle": SubResource("Animation_hqu6o"),
+"walk": SubResource("Animation_1p43e")
+}
 
 [node name="ShooterBody" type="Area2D" groups=["players"]]
+scale = Vector2(2, 2)
 script = ExtResource("1_arp0o")
 
 [node name="PlayerInterface" type="CanvasLayer" parent="."]
 
 [node name="ProgressBar" type="ProgressBar" parent="PlayerInterface"]
 offset_left = -40.0
-offset_top = 52.0
+offset_top = -119.0
 offset_right = 40.0
-offset_bottom = 57.0
+offset_bottom = -114.0
 rotation = -6.28319
 theme_override_styles/background = ExtResource("2_swtwr")
 theme_override_styles/fill = ExtResource("3_yjvxk")
@@ -40,21 +165,27 @@ show_percentage = false
 
 [node name="Username" type="Label" parent="PlayerInterface"]
 offset_left = -40.0
-offset_top = -12.0
+offset_top = -145.0
 offset_right = 40.0
-offset_bottom = 12.0
+offset_bottom = -121.0
 text = "username"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_yhu04")
-rotation = 1.5708
-texture = ExtResource("4_rf1hm")
+texture = ExtResource("4_kryap")
 offset = Vector2(0, -16)
+hframes = 12
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
+position = Vector2(2, -17)
 shape = SubResource("CircleShape2D_u257t")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_qh3gl")
+}
+autoplay = "idle"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

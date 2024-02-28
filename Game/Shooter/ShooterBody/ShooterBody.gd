@@ -13,15 +13,15 @@ func set_data(in_id: int, in_lifetime: float, in_color: Color):
 	self.lifetime = in_lifetime
 	self.color = in_color
 
-	$Sprite2D.material.set_shader_parameter("color", color)
 	$PlayerInterface/Username.text = Globals.players[player_id].username
 
 func handle_input(delta, direction: Vector2):
 	position += direction * SPEED * delta
 
 func _process(_delta):
-	if is_multiplayer_authority():
-		look_at(get_global_mouse_position())
+	# Commented out to prevent rotation based on mouse position
+	# if is_multiplayer_authority():
+	#     look_at(get_global_mouse_position())
 
 	$PlayerInterface.transform.origin = position
 	$PlayerInterface/ProgressBar.value = lifetime * 100

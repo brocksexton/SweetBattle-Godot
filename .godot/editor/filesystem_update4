@@ -1,3 +1,7 @@
-res://Game/Worlds/worlds_demo.tscn
+res://Game/Shooter/ShooterBody/ShooterBody.tscn
 res://Main.tscn
-res://Game/GameInterface/GameInterface.tscn
+res://Interface/Interface.tscn
+res://Interface/PlayerLabel/PlayerLabel.tscn
+res://Game/Shooter/Shooter.tscn
+res://Game/Shooter/Shooter.gd
+res://Game/Shooter/ShooterBody/ShooterBody.gd
