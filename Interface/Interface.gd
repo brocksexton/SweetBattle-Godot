@@ -71,7 +71,7 @@ func add_player(id: int, in_is_ready: bool, player_username: String):
 		var color: Color = Color(randf(), randf(), randf())
 		label.set_label(player_username, in_is_ready, id)
 
-		label.change_label_color(color)
+		#label.change_label_color(color)
 
 		$LobbyScreenControl/LobbyScreenScroll/LobbyScreen.add_child(label)
 

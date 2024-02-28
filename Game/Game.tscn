@@ -1,13 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://c4csrb4ww8cdj"]
+[gd_scene load_steps=5 format=3 uid="uid://c4csrb4ww8cdj"]
 
 [ext_resource type="Script" path="res://Game/Game.gd" id="1_5k1qt"]
 [ext_resource type="PackedScene" uid="uid://dpmc8ov2t756s" path="res://Background/Background.tscn" id="1_63kam"]
 [ext_resource type="PackedScene" uid="uid://bfpifw0vcpi6u" path="res://Game/GameInterface/GameInterface.tscn" id="3_1w1tr"]
+[ext_resource type="Texture2D" uid="uid://bpbq4t6xtffru" path="res://Game/Worlds/Land1/sweetBattle_land1_background.png" id="4_kycp2"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_5k1qt")
 
+[node name="SweetBattleLand1Background" type="Sprite2D" parent="."]
+position = Vector2(892, 548)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("4_kycp2")
+
 [node name="Background" parent="." instance=ExtResource("1_63kam")]
+z_index = -2
+mesh = null
 
 [node name="GameInterface" parent="." instance=ExtResource("3_1w1tr")]
 visible = false

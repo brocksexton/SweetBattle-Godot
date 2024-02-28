@@ -5,3 +5,6 @@ res://Interface/PlayerLabel/PlayerLabel.tscn
 res://Game/Shooter/Shooter.tscn
 res://Game/Shooter/Shooter.gd
 res://Game/Shooter/ShooterBody/ShooterBody.gd
+res://Game/Game.tscn
+res://Interface/PlayerLabel/PlayerLabel.gd
+res://Interface/Interface.gd

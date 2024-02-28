@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cdkwy05f333bn"]
+[gd_scene load_steps=6 format=3 uid="uid://cdkwy05f333bn"]
 
 [ext_resource type="PackedScene" uid="uid://dpmc8ov2t756s" path="res://Background/Background.tscn" id="1_65xq0"]
 [ext_resource type="Script" path="res://Main.gd" id="1_vyv0y"]
 [ext_resource type="PackedScene" uid="uid://cuf2jgmqhrjat" path="res://Interface/Interface.tscn" id="2_ad0ep"]
 [ext_resource type="PackedScene" uid="uid://c4csrb4ww8cdj" path="res://Game/Game.tscn" id="4_piobs"]
+[ext_resource type="AudioStream" uid="uid://cdxmlqd7gqpuv" path="res://Game/kavalokMusic/chobots_d.mp3" id="5_laqml"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_vyv0y")
@@ -14,6 +15,12 @@ script = ExtResource("1_vyv0y")
 
 [node name="Game" parent="." instance=ExtResource("4_piobs")]
 visible = false
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_laqml")
+volume_db = -23.901
+autoplay = true
+stream_paused = true
 
 [connection signal="change_local_ready_status" from="Interface" to="." method="_on_interface_change_local_ready_status"]
 [connection signal="request_game" from="Interface" to="." method="_on_interface_request_game"]
